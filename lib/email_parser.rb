@@ -7,9 +7,11 @@ class EmailAddressParser
     end
 
     def parse
-        parsed = []
-        parsing = @string_of_emails.split(", ")
-        parsing.map {|email_string| parsed << email_string.split(" ")}
-        parsed.flatten.uniq
+        # parsed = []
+        # parsing = @string_of_emails.split(", ")
+        # parsing.map {|email_string| parsed << email_string.split(" ")}
+        # parsed.flatten.uniq
+
+        @string_of_emails.split(/, | /).uniq
     end
 end
